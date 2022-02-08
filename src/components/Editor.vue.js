@@ -198,11 +198,20 @@ export default {
                 "2:3": 2 / 3,
                 "1.91:1": 1.91 / 1,
             },
+            elements: {
+                image: {
+                    name: "img",
+                    image: "",
+                },
+                text: {
+                    text: "",
+                },
+            },
             fonts: fonts,
         }
     },
     methods: {
-        addElement(type) {
+        addElement(data) {
             this.json.elements.push({
                 type: type,
                 name: `${type.toLowerCase()}${
@@ -212,9 +221,8 @@ export default {
                 y: 0.5,
                 width: 1,
                 height: 1,
-                value: "",
-                fillStyle: "#000000",
                 custom: true,
+                ...data,
             })
 
             this.selected = this.json.elements.length - 1

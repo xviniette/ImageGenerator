@@ -9,7 +9,7 @@ export default {
     <div>
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand">IMGEN</a>
+                <a class="navbar-brand">IMAGE GENERATOR by <a href="https://twitter.com/xviniette" target="_blank">Vincent Bazia</a></a>
                     <button class="btn btn-outline-primary" type="submit" @click="newTemplate">New template</button>
             </div>
         </nav>
@@ -44,8 +44,6 @@ export default {
                 </div>
             </div>
         </div>
-
-        <p class="mt-3 text-center">Imgen by <a href="https://github.com/xviniette" target="_blank">Vincent Bazia</a></p>
     </div>`,
     components: { Customize, Render },
     data() {
